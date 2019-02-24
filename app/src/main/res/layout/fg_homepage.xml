@@ -1,13 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_homepage_content"
-        android:text="首页片段xml"
-        android:textSize="29sp"
-        android:layout_centerInParent="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tablayout_top_tab"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:tabMode="fixed"
+        app:tabIndicatorHeight="0dp"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextColor="@color/colorPrimary">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:background="#dadada"
+        android:id="@+id/vp_homepage_tab_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v4.view.ViewPager>
+    <!--<TextView-->
+    <!--android:id="@+id/tv_homepage_content"-->
+    <!--android:text="首页片段xml"-->
+    <!--android:textSize="29sp"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+    <!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent">-->
+    <!--&lt;!&ndash;实单,推荐,足球,篮球,竞彩,电竞,综合的片段内容&ndash;&gt;-->
+    <!--</FrameLayout>-->
+
+</LinearLayout>
